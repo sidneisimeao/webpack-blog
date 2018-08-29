@@ -1,5 +1,12 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./Roboto-Medium.ttf') format('ttf');
+    font-weight: 600;
+}
 
-.hello{
+.hello {
+    font-family: 'Roboto';
     color: red;
     background: url('./github-128.png');
+    font-size: 20px;
 }
