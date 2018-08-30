@@ -4,6 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require("webpack");
 
 module.exports = {
+    mode: "development",
     entry: {
         app: "./src/index.js"
     },
@@ -11,9 +12,7 @@ module.exports = {
     devtool: "inline-source-map",
     // webpack-dev-server 
     devServer:{
-        contentBase: "./dist",
-        // Enabling HMR
-        hot: true
+        contentBase: "./dist",          
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),

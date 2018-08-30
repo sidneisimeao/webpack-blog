@@ -1,16 +1,15 @@
- import _ from 'lodash';
+ // import _ from 'lodash';
  import printMe from "./print.js";
+ import { cube } from "./math.js";
 
  function component() {
-     let element = document.createElement('div');
-     var btn = document.createElement('button');
 
-     element.innerHTML = _.join(['Hello', 'webpack', 'Show de Bola'], ' ');
+     var element = document.createElement('div');
 
-     btn.innerHTML = 'Click me and check the  Console!';
-     btn.onclick = printMe;
-
-     element.appendChild(btn);
+     element.innerHTML = [
+         "Hello WebPack",
+         "5 ao cubo é igual a:".cube(5)
+     ].join("\n\n");
 
      return element;
  }
