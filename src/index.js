@@ -8,7 +8,7 @@
 
      element.innerHTML = [
          "Hello WebPack",
-         "5 ao cubo é igual a:".cube(5)
+         "5 ao cubo é igual a:"+cube(5)
      ].join("\n\n");
 
      return element;

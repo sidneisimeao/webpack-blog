@@ -11,20 +11,28 @@ module.exports = {
     // source maps
     devtool: "inline-source-map",
     // webpack-dev-server 
-    devServer:{
-        contentBase: "./dist",          
+    devServer: {
+        contentBase: "./dist",
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'Hot Module Replacement'
+            title: 'Vanilla Blog'
         }),
         new webpack.HotModuleReplacementPlugin()
     ],
     output: {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, 'dist'),
-        // express, webpack-dev-middleware
-        //publicPath: '/'
+        publicPath: './'
     },
+    module: {
+        rules: [{
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: {
+                loader: "babel-loader"
+            }
+        }]
+    }
 };
